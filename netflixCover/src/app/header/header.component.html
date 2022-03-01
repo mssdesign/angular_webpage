@@ -1,4 +1,20 @@
 <div class="header">
     <h1 class="title">NETFLIX</h1>
-    <button mat-raised-button color="warn">Adicionar</button>
+    <button class="changeLang" mat-raised-button color="warn" (click)="changeLang()">{{changeBtn}}</button>
+    <div class="suggestions">
+        <h2>{{callAction}}</h2>
+        <h3>{{tipText}}</h3>
+        <div class="type_movie">
+            <input #addFilm type="text" (keyup.enter)="addFilmHandler($event.target)">
+            <button (click)="addFilmHandler(addFilm)" mat-raised-button color="warn">{{addBtn}}</button>
+        </div>
+        <div class="list_movies" *ngIf="filmsAdded.length > 0">
+            <ul *ngFor="let movie of filmsAdded">
+                <li>
+                    {{movie}}
+                    <button (click)="rmFilmHandler(movie)">X</button>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>

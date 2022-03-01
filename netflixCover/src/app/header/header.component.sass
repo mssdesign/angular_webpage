@@ -3,6 +3,8 @@
     background-image: Url('http://s3-us-west-2.amazonaws.com/techvibes/wp-content/uploads/2017/04/24135159/Netflix-Background.jpg')
     height: 100vh
     position: relative
+    align-items: center
+    justify-content: center
 
 .header::after
     content: ''
@@ -21,10 +23,28 @@
     top: 50px
     left: 50px
 
-button
+.changeLang
     color: #fff
     height: 35px
     position: absolute
     top: 50px
     right: 50px
+
+.suggestions
+    position: absolute
+    color: #fff
+    display: flex
+    align-items: center
+    flex-direction: column
+
+.suggestions > h2
+    font-weight: bold
+    font-size: 45px
+    margin-bottom: 50px
+    
+
+.type_movie
+    display: flex
+    flex-direction: row 
+
 
